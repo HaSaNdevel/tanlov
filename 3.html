@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 html</title>
+</head>
+
+<body>
+
+
+    <p>Ichimliklar</p>
+
+    <ol>
+        <li>Suv</li>
+        <li>Choy</li>
+        <li>Qahva</li>
+        <li>Kofe</li>
+        <li>Pepsi</li>
+    </ol>
+
+
+    <p>Ichimliklar raqamini kiritib tugmani bosing</p>
+
+
+    <input type="text" id="drinkId" autofocus>
+
+
+    <button onclick="SelectElemnts()">Tanlang</button>
+    <p>Sizning tanlovigiz
+        <label id="drink"></label>
+
+    </p>
+
+
+
+    <script>
+
+        function SelectElemnts() {
+            let drinkId = document.getElementById("drinkId").value;
+            let DrinkElemnts = document.getElementsByTagName("li");
+            if (DrinkElemnts[drinkId - 1] != null)
+ document.getElementById("drink").innerHTML = DrinkElemnts[drinkId - 1].innerHTML;
+            else {
+ document.getElementById("drink").innerHTML = "Mavjud bo\'lmagan ichimlik";
+
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
